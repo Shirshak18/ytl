@@ -1,0 +1,172 @@
+//import com.toedter.calendar.JDateChooser;
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+
+public class SignupOne extends JFrame
+{
+
+    SignupOne() 
+    {
+        setLayout(null);
+        Random ran = new Random();
+        long random = Math.abs((ran.nextLong() % 9000L) + 1000L);
+
+        JLabel formno = new JLabel("APPLICATION FORM NO. " + random);
+        formno.setFont(new Font("Raleway", Font.BOLD, 38));
+        formno.setBounds(140,20,600,40);
+        add(formno);
+
+
+        JLabel personalDetails = new JLabel("Page 1: Personal Details");
+        personalDetails.setFont(new Font("Raleway", Font.BOLD, 22));
+        personalDetails.setBounds(290,80,400,40);
+        add(personalDetails);
+
+
+        JLabel name = new JLabel("Name: ");
+        name .setFont(new Font("Raleway", Font.BOLD, 20));
+        name.setBounds(100,140,100,30);
+        add(name);
+
+        JTextField nameTextField = new JTextField();
+        nameTextField.setFont(new Font("Raleway", Font.BOLD, 15));
+        nameTextField.setBounds(300,140,400,30);
+        add(nameTextField);
+
+        JLabel fname = new JLabel("Father's Name: ");
+        fname.setFont(new Font("Raleway", Font.BOLD, 20));
+        fname.setBounds(100,190,200,30);
+        add(fname);
+
+        JTextField fName = new JTextField();
+        fName.setFont(new Font("Raleway", Font.BOLD, 15));
+        fName.setBounds(300,190,400,30);
+        add(fName);
+
+        JLabel dob = new JLabel("D.O.B.: ");
+        dob.setFont(new Font("Raleway", Font.BOLD, 20));
+        dob.setBounds(100,240,200,30);
+        add(dob);
+
+
+        JTextField dobF = new JTextField();
+        dobF.setFont(new Font("Raleway", Font.BOLD, 15));
+        dobF.setBounds(300,240,400,30);
+        add(dobF);
+
+      /* JDateChooser date = new JDateChooser();
+        date.setBounds(500,240,400,30);
+        add(date);
+        */  
+
+        
+        JLabel sex = new JLabel("Sex: ");
+        sex.setFont(new Font("Raleway", Font.BOLD, 20));
+        sex.setBounds(100,290,200,30);
+        add(sex);
+
+        //JTextField seF= new JTextField();
+        //seF.setFont(new Font("Raleway", Font.BOLD, 15));
+        //seF.setBounds(300,290,400,30);
+        //add(seF);
+
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(300,290,100,30);
+        male.setBackground(Color.BLACK);
+        add(male);
+
+        JRadioButton female = new JRadioButton("Female");
+        female.setBounds(400,290,100,30);
+        female.setBackground(Color.BLACK);
+        add(female);
+
+        JRadioButton na = new JRadioButton("Prefer Not To Say");
+        na.setBounds(500,290,150,30);
+        na.setBackground(Color.BLACK);
+        add(na);
+
+        ButtonGroup gender = new ButtonGroup();   //this make sures that only one button can be selected
+        gender.add(male);
+        gender.add(female);
+        gender.add(na);
+
+
+        JLabel email = new JLabel("Email: ");
+        email.setFont(new Font("Raleway", Font.BOLD, 20));
+        email.setBounds(100,330,200,30);
+        add(email);
+
+        JTextField eF= new JTextField();
+        eF.setFont(new Font("Raleway", Font.BOLD, 15));
+        eF.setBounds(300,330,400,30);
+        add(eF);
+
+        JLabel address = new JLabel("Address: ");
+        address.setFont(new Font("Raleway", Font.BOLD, 20));
+        address.setBounds(100,370,200,30);
+        add(address);
+
+        JTextField aF= new JTextField();
+        aF.setFont(new Font("Raleway", Font.BOLD, 15));
+        aF.setBounds(300,370,400,30);
+        add(aF);
+
+
+        JLabel city = new JLabel("City: ");
+        city.setFont(new Font("Raleway", Font.BOLD, 20));
+        city.setBounds(100,410,200,30);
+        add(city);
+
+        JTextField cF= new JTextField();
+        cF.setFont(new Font("Raleway", Font.BOLD, 15));
+        cF.setBounds(300,410,400,30);
+        add(cF);
+       
+
+        JLabel state = new JLabel("State: ");
+        state.setFont(new Font("Raleway", Font.BOLD, 20));
+        state.setBounds(100,450,200,30);
+        add(state);
+
+        JTextField sF= new JTextField();
+        sF.setFont(new Font("Raleway", Font.BOLD, 15));
+        sF.setBounds(300,450,400,30);
+        add(sF);
+
+        JLabel zip = new JLabel("Zip Code: ");
+        zip.setFont(new Font("Raleway", Font.BOLD, 20));
+        zip.setBounds(100,500,200,30);
+        add(zip);
+
+        JTextField zF= new JTextField();
+        zF.setFont(new Font("Raleway", Font.BOLD, 15));
+        zF.setBounds(300,500,400,30);
+        add(zF);
+
+        JButton next = new JButton ("Next");
+        //next.setBackground(Color.green);
+        //next.setForeground(Color.blue);
+        next.setFont(new Font ("Raleway",Font.BOLD, 14));
+        next.setBounds(620,660,90,30);
+        add(next);
+
+        
+
+
+
+
+getContentPane().setBackground(Color.orange);
+
+setSize(850, 800);
+setLocation(350, 10); 
+setVisible(true);
+    }
+
+    public static void main (String args[])
+    {
+        new SignupOne();
+               
+    }
+}
